@@ -1,4 +1,3 @@
 window.onload = () => {
- YaSendSuggestToken('https://oauth-master-class-tkge.vercel.app'}
-)
+ YaSendSuggestToken("https://oauth-master-class-tkge.vercel.app")
 };
