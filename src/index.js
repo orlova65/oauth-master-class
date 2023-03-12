@@ -24,13 +24,14 @@ window.onload = () => {
       },
       'https://oauth-master-class-tkge.vercel.app'
    )
-   .then(({
-      handler
-   }) => handler())
-   .then(data => console.log('Сообщение с токеном', data))
-   .catch(error => console.log('Обработка ошибки', error));
-  };
-  document.getElementById("button").onclick = () => {
-    // TODO button
+ .then(({ handler }) => handler())
+      .then(async (data) => {
+        const result = await fetchYandexData(data.access_token);
+
+        authorize(result);
+
+        console.log(result, data);
+      })
+      .catch((error) => console.log("Что-то пошло не так: ", error));
   };
 };
