@@ -17,7 +17,18 @@ const fetchYandexData = (token) =>
 
 window.onload = () => {
   document.getElementById("suggest").onclick = () => {
-    // TODO suggest
+   YaAuthSuggest.init({
+         client_id: 'c836289879e94f93bbfedb64310e2fe9',
+         response_type: 'token',
+         redirect_uri: 'https://oauth-master-class-tkge.vercel.app/token.html'
+      },
+      'https://oauth-master-class-tkge.vercel.app'
+   )
+   .then(({
+      handler
+   }) => handler())
+   .then(data => console.log('Сообщение с токеном', data))
+   .catch(error => console.log('Обработка ошибки', error));
   };
   document.getElementById("button").onclick = () => {
     // TODO button
