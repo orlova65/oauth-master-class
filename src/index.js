@@ -26,11 +26,13 @@ window.onload = () => {
    )
  .then(({ handler }) => handler())
       .then(async (data) => {
+        console.log("Сообщение с токеном: ", data);
+
         const result = await fetchYandexData(data.access_token);
 
-        authorize(result);
+        console.log("Сообщение с ответом Яндекса: ", result);
 
-        console.log(result, data);
+        authorize(result);
       })
       .catch((error) => console.log("Что-то пошло не так: ", error));
   };
