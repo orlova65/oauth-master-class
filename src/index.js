@@ -23,13 +23,7 @@ window.onload = () => {
          redirect_uri: "https://oauth-master-class-tkge.vercel.app/token.html",
       },
       "https://oauth-master-class-tkge.vercel.app"
-                      {
-        parentId: "buttonContainer",
-        view: "button",
-        buttonTheme: "light",
-        buttonSize: "xs",
-        buttonBorderRadius: 20,
-      }
+                   
    )
  .then(({ handler }) => handler())
       .then(async (data) => {
