@@ -18,11 +18,11 @@ const fetchYandexData = (token) =>
 window.onload = () => {
   document.getElementById("suggest").onclick = () => {
    YaAuthSuggest.init({
-         client_id: 'c836289879e94f93bbfedb64310e2fe9',
+         client_id: '67de1fdde85c47729c91f1e4da9d5056',
          response_type: 'token',
-         redirect_uri: "https://oauth-master-class-tkge.vercel.app/token.html",
+         redirect_uri: "https://oauth-master-class-m2mp.vercel.app/token.html",
       },
-      "https://oauth-master-class-tkge.vercel.app"
+      "https://oauth-master-class-m2mp.vercel.app"
                    
    )
  .then(({ handler }) => handler())
@@ -38,11 +38,11 @@ window.onload = () => {
    document.getElementById("button").onclick = () => {
     window.YaAuthSuggest.init(
       {
-        client_id: "c836289879e94f93bbfedb64310e2fe9",
+        client_id: "67de1fdde85c47729c91f1e4da9d5056",
         response_type: "token",
-        redirect_uri: "https://oauth-master-class-tkge.vercel.app/token.html",
+        redirect_uri: "https://oauth-master-class-m2mp.vercel.app/token.html",
       },
-      "https://oauth-master-class-tkge.vercel.app",
+      "https://oauth-master-class-m2mp.vercel.app",
       {
         parentId: "buttonContainer",
         view: "button",
